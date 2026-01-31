@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>TEHZIB's PORFOLIO</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #43857b;
+        text-align: center;
+        font-family: "Open Sans", sans-serif;
+      }
+      /* Project Section */
+      #projectSec {
+        padding: 50px 20px;
+        color: #fff;
+      }
+      h2 {
+        font-size: 48px;
+        text-shadow: 5px 3px black;
+      }
+      .projectContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+      }
+      .projectCard {
+        border: 2px solid #dee;
+        border-radius: 8px;
+        box-shadow: 4px 4px 4px black;
+        background: #1b5c5c;
+      }
+      .projectCard img {
+        width: 100%;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+      .projectCard h3 {
+        margin: 10px 0;
+      }
+      .projectCard a{
+        text-decoration: none;
+        cursor: pointer;
+        color: black;
+      }
+      .projectCard p{
+        font-weight:200;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Project Section  -->
+    <section id="projectSec">
+      <h2>Projects</h2>
+      <br />
+      <div class="projectContainer">
+        <div class="projectCard">
+          <img src="assets/image.png" alt="Project 1 Image" />
+          <h3><a href="https://tehzib014-dev.github.io/Counter-App-JavaScript-Practice-Project/" target="_blank" rel="noopener">Counter App – JavaScript Practice Project</a></h3>
+          <p>
+            I built a simple counter application using HTML, CSS, and JavaScript
+            to practice DOM manipulation and event handling. The app allows
+            users to increase or decrease a value by 1 or 10 and reset it to
+            zero.
+          </p>
+          <p>Technologies used: HTML, CSS, JavaScript.</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
