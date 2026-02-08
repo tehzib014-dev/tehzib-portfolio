@@ -10,10 +10,48 @@
       rel="stylesheet"
     />
     <title>TEHZIB's PORFOLIO</title>
-    <link rel="stylesheet" href="style.css">
-      
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/heroSec.css" />
+    <link rel="stylesheet" href="css/project.css" />
+    <link rel="stylesheet" href="css/footer.css" />
   </head>
   <body>
+    <!-- navbar -->
+    <nav>
+      <div class="navContainer">
+        <span class="left"
+          ><h1><a href="#">TEHZIB's PORTFOLIO</a></h1></span
+        >
+        <span class="right">
+          <ul>
+            <li><a href="#heroSection">Home</a></li>
+            <li><a href="#projectSec">Projects</a></li>
+            <li><a href="#aboutSec">About Me</a></li>
+            <li><a href="#contactSec">Contact</a></li>
+          </ul>
+        </span>
+      </div>
+    </nav>
+
+    <!-- hero section -->
+    <div id="heroSection">
+      <div class="left">
+        <h2>Hi there!</h2>
+        <p>
+          This is <b>Tehzib Imran</b>, Newbie Web developer.
+          <br />
+        </p>
+        <span class="callTOAction">
+          <button id="Btn-1">Get Started</button>
+          <button id="Btn-2">Learn More</button>
+        </span>
+      </div>
+      <div class="right">
+        <img src="assets/tehzib.jpeg" alt="tehzib picture" />
+      </div>
+    </div>
+    <hr />
+
     <!-- Project Section  -->
     <section id="projectSec">
       <h2>Projects</h2>
@@ -21,7 +59,14 @@
       <div class="projectContainer">
         <div class="projectCard">
           <img src="assets/image.png" alt="Project 1 Image" />
-          <h3><a href="https://tehzib014-dev.github.io/Counter-App-JavaScript-Practice-Project/" target="_blank" rel="noopener">Counter App – JavaScript Practice Project</a></h3>
+          <h3>
+            <a
+              href="https://tehzib014-dev.github.io/Counter-App-JavaScript-Practice-Project/"
+              target="_blank"
+              rel="noopener"
+              >Counter App – JavaScript Practice Project</a
+            >
+          </h3>
           <p>
             I built a simple counter application using HTML, CSS, and JavaScript
             to practice DOM manipulation and event handling. The app allows
@@ -32,5 +77,13 @@
         </div>
       </div>
     </section>
+    <section id="footer">
+      <footer>
+        &copy; All Rights Reserved by Tehzib Imran
+        <a href="https://github.com/tehzib014-dev" target="_blank"><img src="assets/github.png" alt="github" /></a>
+        <a href="https://www.linkedin.com/in/tehzib-imran-2538512bb/" target="_blank"><img src="assets/linkedin.jpg" alt="linkedin" /></a>
+      </footer>
+    </section>
+    <script src="index.js"></script>
   </body>
 </html>

@@ -1,0 +1,17 @@
+#footer {
+  background: rgb(7, 7, 31);
+  color: white;
+}
+#footer footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 10px 20px;
+}
+#footer img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
