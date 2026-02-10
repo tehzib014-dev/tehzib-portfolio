@@ -3,87 +3,290 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tehzib Imran's professional portfolio showcasing web development projects and skills. Explore my work with HTML, CSS, and JavaScript."
+    />
+    <meta
+      name="keywords"
+      content="Tehzib Imran, web developer, portfolio, HTML, CSS, JavaScript, frontend development"
+    />
+    <meta name="author" content="Tehzib Imran" />
+    <meta name="theme-color" content="#153243" />
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Tehzib Imran - Web Developer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Professional portfolio of Tehzib Imran, showcasing web development projects built with modern technologies."
+    />
+    <meta property="og:site_name" content="Tehzib's Portfolio" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://your-portfolio-domain.com" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
-    <title>TEHZIB's PORFOLIO</title>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/heroSec.css" />
+    <link rel="stylesheet" href="css/hero.css" />
     <link rel="stylesheet" href="css/project.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/contact.css" />
     <link rel="stylesheet" href="css/footer.css" />
+
+    <title>Tehzib Imran - Web Developer Portfolio</title>
   </head>
   <body>
-    <!-- navbar -->
-    <nav>
-      <div class="navContainer">
-        <span class="left"
-          ><h1><a href="#">TEHZIB's PORTFOLIO</a></h1></span
-        >
-        <span class="right">
-          <ul>
-            <li><a href="#heroSection">Home</a></li>
-            <li><a href="#projectSec">Projects</a></li>
-            <li><a href="#aboutSec">About Me</a></li>
-            <li><a href="#contactSec">Contact</a></li>
-          </ul>
-        </span>
-      </div>
-    </nav>
+    <!-- Header with Navigation -->
+    <header role="banner">
+      <nav role="navigation" aria-label="Main Navigation">
+        <div class="navContainer">
+          <div class="left">
+            <h1>
+              <a href="#home" aria-label="Tehzib Imran Portfolio - Home"
+                >Tehzib's Portfolio</a
+              >
+            </h1>
+          </div>
+          <div class="right">
+            <ul>
+              <li><a href="#home" title="Go to Home section">Home</a></li>
+              <li>
+                <a href="#projects" title="Go to Projects section">Projects</a>
+              </li>
+              <li><a href="#about" title="Go to About section">About Me</a></li>
+              <li>
+                <a href="#contact" title="Go to Contact section">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-    <!-- hero section -->
-    <div id="heroSection">
-      <div class="left">
-        <h2>Hi there!</h2>
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero-section">
+        <div id="heroSection">
+          <div class="left">
+            <h1>Hi there!</h1>
+            <p>
+              I'm <strong>Tehzib Imran</strong>, a passionate web developer
+              specializing in creating responsive and user-friendly web
+              applications. I focus on building projects using modern web
+              technologies including HTML, CSS, and JavaScript.
+            </p>
+            <div class="callTOAction">
+              <a href="#projects" class="btn btn-primary">View My Work</a>
+              <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+          </div>
+          <figure class="right">
+            <img
+              src="assets/tehzib.jpeg"
+              alt="Tehzib Imran, Web Developer"
+              width="365"
+              height="500"
+              loading="lazy"
+            />
+            <!-- <figcaption>Tehzib Imran - Web Developer</figcaption> -->
+          </figure>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Projects Section -->
+      <section id="projects" class="projects-section">
+        <h2>Featured Projects</h2>
+        <div class="projectContainer">
+          <article class="projectCard">
+            <figure>
+              <img
+                src="assets/image.png"
+                alt="Counter App - JavaScript Practice Project"
+                loading="lazy"
+              />
+              <figcaption>Counter Application Interface</figcaption>
+            </figure>
+            <h3>
+              <a
+                href="https://tehzib014-dev.github.io/Counter-App-JavaScript-Practice-Project/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="View Counter App project in new window"
+              >
+                Counter App – JavaScript Practice Project
+              </a>
+            </h3>
+            <p>
+              A practical demonstration of DOM manipulation and event handling.
+              This interactive counter application allows users to increment or
+              decrement values, showcasing core JavaScript concepts and user
+              interaction patterns.
+            </p>
+            <p><strong>Technologies:</strong> HTML5, CSS3, JavaScript</p>
+          </article>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- About Section (for better semantics) -->
+      <section id="about" class="about-section">
+        <h2>About Me</h2>
         <p>
-          This is <b>Tehzib Imran</b>, Newbie Web developer.
-          <br />
+          I'm a newbie web developer passionate about creating meaningful
+          digital experiences. Through projects like the Counter App, I've
+          developed strong foundations in frontend development and continue to
+          expand my skills in modern web technologies.
         </p>
-        <span class="callTOAction">
-          <button id="Btn-1">Get Started</button>
-          <button id="Btn-2">Learn More</button>
-        </span>
-      </div>
-      <div class="right">
-        <img src="assets/tehzib.jpeg" alt="tehzib picture" />
-      </div>
-    </div>
+      </section>
+
+      <hr />
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <p>
+          Have a project in mind or want to collaborate? I'd love to hear from
+          you!
+        </p>
+        <form
+          action="https://formspree.io/f/your-form-id"
+          method="POST"
+          aria-label="Contact form"
+          novalidate
+        >
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your full name"
+              required
+              aria-required="true"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="your.email@example.com"
+              required
+              aria-required="true"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Your message here..."
+              required
+              aria-required="true"
+            ></textarea>
+          </div>
+
+          <button type="submit" aria-label="Submit contact form">
+            Send Message
+          </button>
+        </form>
+      </section>
+    </main>
+
     <hr />
 
-    <!-- Project Section  -->
-    <section id="projectSec">
-      <h2>Projects</h2>
-      <br />
-      <div class="projectContainer">
-        <div class="projectCard">
-          <img src="assets/image.png" alt="Project 1 Image" />
-          <h3>
-            <a
-              href="https://tehzib014-dev.github.io/Counter-App-JavaScript-Practice-Project/"
-              target="_blank"
-              rel="noopener"
-              >Counter App – JavaScript Practice Project</a
-            >
-          </h3>
-          <p>
-            I built a simple counter application using HTML, CSS, and JavaScript
-            to practice DOM manipulation and event handling. The app allows
-            users to increase or decrease a value by 1 or 10 and reset it to
-            zero.
-          </p>
-          <p>Technologies used: HTML, CSS, JavaScript.</p>
-        </div>
+    <!-- Footer -->
+    <footer role="contentinfo">
+      <div class="footer-content">
+        <p>
+          &copy; <span id="year"></span> All Rights Reserved by Tehzib Imran
+        </p>
+        <nav aria-label="Social Media Links">
+          <ul>
+            <li>
+              <a
+                href="https://github.com/tehzib014-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Tehzib's GitHub profile"
+                title="GitHub - Opens in new window"
+              >
+                <img
+                  src="assets/github.png"
+                  alt="GitHub Icon"
+                  width="30"
+                  height="30"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/tehzib-imran-2538512bb/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Tehzib's LinkedIn profile"
+                title="LinkedIn - Opens in new window"
+              >
+                <img
+                  src="assets/linkedin.jpg"
+                  alt="LinkedIn Icon"
+                  width="30"
+                  height="30"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </section>
-    <section id="footer">
-      <footer>
-        &copy; All Rights Reserved by Tehzib Imran
-        <a href="https://github.com/tehzib014-dev" target="_blank"><img src="assets/github.png" alt="github" /></a>
-        <a href="https://www.linkedin.com/in/tehzib-imran-2538512bb/" target="_blank"><img src="assets/linkedin.jpg" alt="linkedin" /></a>
-      </footer>
-    </section>
-    <script src="index.js"></script>
+    </footer>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Tehzib Imran",
+        "url": "https://your-portfolio-domain.com",
+        "jobTitle": "Web Developer",
+        "sameAs": [
+          "https://github.com/tehzib014-dev",
+          "https://www.linkedin.com/in/tehzib-imran-2538512bb/"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Freelance"
+        }
+      }
+    </script>
+
+    <!-- Scripts -->
+    <script>
+      // Auto-update copyright year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="index.js" async defer></script>
   </body>
 </html>

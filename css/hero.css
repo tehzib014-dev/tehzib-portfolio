@@ -1,0 +1,258 @@
+/* Hero Section */
+#home {
+  width: 100%;
+  background: linear-gradient(135deg, #0f1419 0%, #1a2332 50%, #1d3a52 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+#home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(72, 209, 204, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+#heroSection {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  padding: 100px 20px;
+  gap: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+#heroSection .left {
+  width: 100%;
+  max-width: 600px;
+}
+
+#heroSection .left h1 {
+  font-size: 3.2em;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  line-height: 1.2;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#heroSection .left p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #d0d8e0;
+}
+
+#heroSection .left strong {
+  color: #ffd700;
+  font-weight: 700;
+}
+
+.callTOAction {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  color: #0f1419;
+}
+
+.btn-primary:hover {
+  color: #0f1419;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #ffd700;
+  border: 2px solid #ffd700;
+}
+
+.btn-secondary:hover {
+  background: #ffd700;
+  color: #0f1419;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+}
+
+#heroSection .right {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+#heroSection figure {
+  margin: 0;
+  padding: 20px;
+  position: relative;
+}
+
+#heroSection figure::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(72, 209, 204, 0.2) 100%);
+  border-radius: 15px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#heroSection figure:hover::before {
+  opacity: 1;
+}
+
+#heroSection figure img {
+  height: 500px;
+  width: 365px;
+  border-radius: 15px;
+  display: block;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  border: 3px solid rgba(255, 215, 0, 0.3);
+}
+
+#heroSection figure:hover img {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(255, 215, 0, 0.2);
+}
+
+#heroSection figcaption {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #a9b6be;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  #heroSection {
+    grid-template-columns: 1fr;
+    padding: 50px 20px;
+  }
+  #heroSection .left {
+    text-align: center;
+    width: 100%;
+  }
+  #heroSection .left h1 {
+    font-size: 2rem;
+  }
+  #heroSection .right {
+    width: 100%;
+  }
+  #heroSection figure img {
+    height: 350px;
+    width: 280px;
+  }
+  .callTOAction{
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  #heroSection {
+    padding: 40px 15px;
+    gap: 1.5rem;
+  }
+  #heroSection .left h1 {
+    font-size: 1.5rem;
+  }
+  #heroSection .left p {
+    font-size: 0.95rem;
+  }
+  .callTOAction {
+    gap: 0.8rem;
+  }
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  #heroSection figure img {
+    height: 250px;
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  #heroSection {
+    padding: 30px 10px;
+  }
+  #heroSection .left h1 {
+    font-size: 1.3rem;
+  }
+  #heroSection .left p {
+    font-size: 0.9rem;
+  }
+  .callTOAction {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .btn {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 0.85rem;
+  }
+  #heroSection figure img {
+    height: 200px;
+    width: 160px;
+  }
+  #heroSection figure {
+    padding: 10px;
+  }
+}
