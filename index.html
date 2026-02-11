@@ -12,7 +12,7 @@
       content="Tehzib Imran, web developer, portfolio, HTML, CSS, JavaScript, frontend development"
     />
     <meta name="author" content="Tehzib Imran" />
-    <meta name="theme-color" content="#153243" />
+    <!-- Removed theme-color meta tag for compatibility -->
 
     <!-- Open Graph Meta Tags for Social Sharing -->
     <meta property="og:type" content="website" />
@@ -47,6 +47,19 @@
     <link rel="stylesheet" href="css/footer.css" />
 
     <title>Tehzib Imran - Web Developer Portfolio</title>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "rKxJq_PFcsM0-4sCr",
+        });
+      })();
+    </script>
+    <script src="index.js"></script>
   </head>
   <body>
     <!-- Header with Navigation -->
@@ -165,12 +178,7 @@
           Have a project in mind or want to collaborate? I'd love to hear from
           you!
         </p>
-        <form
-          action="https://formspree.io/f/your-form-id"
-          method="POST"
-          aria-label="Contact form"
-          novalidate
-        >
+        <form aria-label="Contact form" novalidate>
           <div class="form-group">
             <label for="name">Name:</label>
             <input
@@ -196,6 +204,18 @@
           </div>
 
           <div class="form-group">
+            <label for="subject">Subject:</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Your subject here..."
+              required
+              aria-required="true"
+            />
+          </div>
+
+          <div class="form-group">
             <label for="message">Message:</label>
             <textarea
               id="message"
@@ -207,7 +227,11 @@
             ></textarea>
           </div>
 
-          <button type="submit" aria-label="Submit contact form">
+          <button
+            type="submit"
+            onclick="sendMail()"
+            aria-label="Submit contact form"
+          >
             Send Message
           </button>
         </form>
@@ -287,6 +311,5 @@
       // Auto-update copyright year
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-    <script src="index.js" async defer></script>
   </body>
 </html>
