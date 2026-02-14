@@ -79,6 +79,7 @@ form {
   flex-direction: column;
   gap: 2rem;
   background: linear-gradient(135deg, rgba(27, 92, 92, 0.6) 0%, rgba(21, 50, 67, 0.6) 100%);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 215, 0, 0.2);
   position: relative;
@@ -128,6 +129,7 @@ input, textarea {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   line-height: 1.5;
 }
